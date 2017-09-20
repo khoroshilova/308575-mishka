@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Виктория Хорошилова](https://up.htmlacademy.ru/adaptive/12/user/308575).
-* Наставник: [Виктория Коваленко] (https://htmlacademy.ru/profile/id42638).
+* Наставник: [Виктория Коваленко](https://htmlacademy.ru/profile/id42638).
 
 ---
 
