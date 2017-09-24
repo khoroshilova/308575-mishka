@@ -10,7 +10,7 @@
         <img class="page-header__logo-image" src="http://placehold.it/150x100" width="86" height="35" alt="Мишка">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toogle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -61,27 +61,27 @@
         </fieldset>
         <fieldset class="form__customer">
           <legend class="form__caption">ФИО</legend>
-          <label class="form__label" for="customer-name">Имя:</label>
-          <input class="customer__name" id="customer-name" type="text" name="customer-name" placeholder="Введите ваше имя*" required>
-          <label class="form__label" for="customer-name">Фамилия:</label>
-          <input class="customer__name" id="customer-name" type="text" name="customer-name" placeholder="Укажите фамилию*" required>
-          <label class="form__label" for="customer-name">Отчество:</label>
-          <input class="customer__name" id="customer-name" type="text" name="customer-name" placeholder="Отчество, если желаете">
+          <label class="form__label" for="customer-firstname">Имя:</label>
+          <input class="customer__info" id="customer-firstname" type="text" name="customer-firstname" placeholder="Введите ваше имя*" required>
+          <label class="form__label" for="customer-lastname">Фамилия:</label>
+          <input class="customer__info" id="customer-lastname" type="text" name="customer-lastname" placeholder="Укажите фамилию*" required>
+          <label class="form__label" for="customer-patronymic">Отчество:</label>
+          <input class="customer__info" id="customer-patronymic" type="text" name="customer-patronymic" placeholder="Отчество, если желаете">
         </fieldset>
         <fieldset class="form__customer">
           <legend class="form__caption">Тел</legend>
           <label class="form__label form__tel" for="tel"></label>
-          <input class="customer__name" id="tel" type="tel" name="tel" placeholder="+7 ХХХ ХХ ХХ*" required>
+          <input class="customer__info" id="tel" type="tel" name="tel" placeholder="+7 ХХХ ХХ ХХ*" required>
         </fieldset>
         <fieldset class="form__customer">
           <legend class="form__caption">E-mail</legend>
           <label class="form__label form__email" for="email"></label>
-          <input class="customer__name" id="email" type="email" name="email" placeholder="Ваш Email*" required>
+          <input class="customer__info" id="email" type="email" name="email" placeholder="Ваш Email*" required>
         </fieldset>
         <fieldset class="form__customer">
           <legend class="form__caption">Доп</legend>
           <label class="form__label" for="text"></label>
-          <input class="customer__name" id="text" type="textarea" name="text" placeholder="Опишите все ваши пожелания к заказу">
+          <textarea class="customer__info customer__wishes" id="text" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
         <p class="form__text-required">*Поля обязательны для заполнения</p>
         <button class="form_button button" type="submit">Отправить заказ</button>
