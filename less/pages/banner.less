@@ -1,11 +1,45 @@
 .banner {
   outline: 1px dotted red;
-  width: 575px;
+  max-width: 100%;
   height: 373px;
+  padding: 0 30px;
+  text-align: center;
+  background-color: @bg-light-gray;
   background-image: url("../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .banner__title {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  margin-top: 90px;
+  padding: 0 10px;
+  text-align: center;
   font-size: 27px;
   line-height: 30px;
+  font-weight: bold;
+}
+
+@media (min-width: @tablet-width) {
+  .banner {
+    padding: 0 50px;
+  }
+
+  .banner__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .banner {
+    padding: 0 100px;
+  }
+
+  .banner__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

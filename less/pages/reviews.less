@@ -1,11 +1,21 @@
 .reviews {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
   outline: 1px dotted red;
 }
 
 .reviews__title {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
+}
+
+.reviews__write-tab {
+  display: none;
 }
 
 .reviews__item {
@@ -42,4 +52,72 @@
   border: 0;
   background-color: @white;
   cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    padding: 0 50px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+
+  .reviews__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .reviews__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .reviews__write-mob {
+    display: none;
+  }
+
+  .reviews__write-tab {
+    display: block;
+    width: 175px;
+    height: 23px;
+  }
+
+  .reviews__item {
+    width: 668px;
+  }
+
+  .reviews__text {
+    font-size: 17px;
+  }
+
+  .reviews__author-name,
+  .reviews__author-instagram {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    padding: 0 100px;
+    background-position: 100px 0;
+  }
+
+  .reviews__wrapper {
+    margin-left: 175px;
+  }
+
+  .reviews__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .reviews__item {
+    width: 770px;
+    margin-left: 175px;
+  }
+
+  .reviews__author-name,
+  .reviews__author-instagram {
+    font-size: 17px;
+  }
 }
