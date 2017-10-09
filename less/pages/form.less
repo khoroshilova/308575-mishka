@@ -1,10 +1,7 @@
-.form {
-  outline: 1px dotted green;
-}
-
 .form__title {
   display: block;
   margin: 0;
+  margin-bottom: 28px;
   padding: 75px 0;
   font-size: 27px;
   line-height: 30px;
@@ -16,29 +13,48 @@
 .form__text {
   display: block;
   margin: 0;
+  margin-bottom: 25px;
   padding: 0 30px;
   font-size: 13px;
   color: @gray-light;
-  outline: 1px dotted @bg-1;
 }
 
 .form__fieldset {
   display: flex;
   flex-direction: column;
+  width: 260px;
   margin: 0 0 30px 0;
   padding: 0 30px;
-  border: none;
+}
+
+.form__fieldset--customer {
+  margin-bottom: 0;
 }
 
 .form__caption {
   display: block;
-  width: 167px;
+  position: relative;
+  width: 260px;
   margin-bottom: 15px;
   font-size: 17px;
   line-height: 16px;
   font-weight: bold;
   text-transform: uppercase;
   color: @tiffany;
+}
+
+@media (max-width: @mobile-width-only) {
+  .form__caption {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      right: 0;
+      width: 198px;
+      height: 1px;
+      background-color: @tiffany;
+    }
+  }
 }
 
 .form__wrapper-block,
@@ -49,13 +65,107 @@
 }
 
 .form__label {
+  position: relative;
+  margin-bottom: 15px;
+  padding: 10px 0 10px 60px;
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.form__label--tel,
+.form__label--email,
+.form__label--wishes {
+  font-size: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.form__radio,
+.form__checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.form__label--type {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    background-color: @white;
+    border: 2px solid @black;
+    border-radius: 50%;
+  }
+}
+
+.form__label--type,
+.form__label--color {
+  &:hover {
+    &::before {
+      border: 2px solid @tiffany;
+    }
+  }
+
+  &:active {
+    &::before {
+      border: 2px solid @opacity-03;
+    }
+  }
+}
+
+.form__radio:checked + .form__label--type {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    background-color: @tiffany;
+    border-radius: 50%;
+  }
+}
+
+.form__label--color {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+    border: 2px solid @black;
+  }
+}
+
+.form__checkbox:checked + .form__label--color {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 7px;
+    width: 33px;
+    height: 23px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 80%;
+  }
+}
+
+.form__label--user-name {
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 .form__customer-info {
-  width: 260px;
+  width: 256px;
+  margin-bottom: 15px;
   padding-bottom: 15px;
   font-size: 17px;
   line-height: 18px;
@@ -72,19 +182,26 @@
 }
 
 .form__wrapper {
+  width: 260px;
+  margin-bottom: 56px;
   padding: 0 30px;
-  outline: 1px dotted @bg-1;
 }
 
 .form__text-required {
   display: block;
+  width: 260px;
   margin: 0;
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 16px;
   color: @gray-light;
 }
 
 @media (min-width: @tablet-width) {
+  .form {
+    margin-top: -84px;
+  }
+
   .form__title {
     padding-top: 105px;
     font-size: 43px;
@@ -99,11 +216,26 @@
 
   .form__fieldset {
     flex-direction: row;
-    padding: 0 50px;
+    width: 668px;
+  }
+
+  .form__caption {
+    width: 167px;
+  }
+
+  .form__caption--user {
+    margin-top: 0;
   }
 
   .form__wrapper-fieldset {
+    padding-top: 50px;
+    padding-bottom: 30px;
     background-color: @gray-middle;
+  }
+
+  .form__wrapper-fieldset--customer {
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
   .form__label {
@@ -116,6 +248,10 @@
     padding: 0 50px;
   }
 
+  .form__fieldset--color {
+    margin: 0;
+  }
+
   .form__wrapper-block--color {
     flex-direction: row;
     flex-wrap: wrap;
@@ -123,24 +259,55 @@
   }
 
   .form__label--color {
-    width: 240px;
-    outline: 1px dotted @bg-1;
+    width: 190px;
+  }
+
+  .form__fieldset--customer {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   .form__wrapper-block--user-name {
     flex-direction: row;
     flex-wrap: wrap;
     width: 500px;
+
+    .form__label {
+      margin-right: 25px;
+    }
+  }
+
+  .form__wrapper-block--user-info {
+    flex-direction: row;
+    flex-grow: 1;
+  }
+
+  .form__label--tel,
+   .form__label--email,
+   .form__label--wishes {
+    padding: 0;
   }
 
   .form__customer-info {
-    min-width: 375px;
+    flex-grow: 1;
+    width: 358px;
+    padding-left: 15px;
+  }
+
+  .form__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 668px;
   }
 
   .form__text-required {
     order: 1;
+    width: 334px;
+    margin-bottom: 0;
+    padding-top: 10px;
     font-size: 17px;
     line-height: 30px;
+    text-align: right;
   }
 
   .form_button {
@@ -149,28 +316,46 @@
 }
 
 @media (min-width: @desktop-width) {
+  .form {
+    margin-top: -45px;
+  }
+
   .form__title {
     font-size: 53px;
     line-height: 57px;
   }
 
   .form__text {
-    padding: 0 100px;
+    padding: 0 210px;
   }
 
   .form__wrapper {
-    padding: 0 275px;
+    padding: 0 225px;
+  }
+
+  .form__fieldset {
+    width: 1050px;
+  }
+
+  .form__caption {
+    width: 175px;
+    text-align: center;
   }
 
   .form__wrapper-block--color {
-    width: 760px;
+    width: 875px;
   }
 
   .form__label--color {
-    width: 250px;
+    width: 202px;
   }
 
   .form__wrapper-block--user-name {
+    width: 700px;
+  }
+
+  .form__wrapper-block--user-info {
+    flex-grow: 0;
     width: 700px;
   }
 

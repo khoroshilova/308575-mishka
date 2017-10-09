@@ -1,0 +1,115 @@
+.modal-content {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 258px;
+  padding: 37px 30px 46px 30px;
+  background-color: @white;
+  transform: translate(-50%, -50%);
+  border: 1px solid @opacity-02;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 1, 0.2);
+  z-index: 50;
+}
+
+.modal-content__title {
+  display: block;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0 50px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.modal-content__text {
+  display: block;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+  color: @gray-light;
+}
+
+.modal-content__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.modal-content__form-label {
+  padding: 17px 30px;
+  font-size: 17px;
+  line-height: 16px;
+  color: @black;
+  border: 2px solid @opacity-01;
+  cursor: pointer;
+}
+
+.modal-content__form-label {
+  &:hover {
+    border: 2px solid @opacity-03;
+  }
+}
+
+.modal-content__checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.modal-content__checkbox:checked + .modal-content__form-label {
+    border: 2px solid @tiffany;
+  }
+
+.modal-content__button {
+  width: 260px;
+  padding: 18px 0;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @white;
+  background-color: @tiffany;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-content__button {
+  &:hover {
+    box-shadow: 0 2px 0 0 @tiffany,
+                0 -2px 0 0 @tiffany;
+  }
+
+  &:active {
+    color: @opacity-w3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .modal-content {
+    width: 354px;
+    padding: 43px 105px;
+  }
+
+  .modal-content__title {
+    padding: 0;
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .modal-content__text {
+    margin-bottom: 30px;
+  }
+
+  .modal-content__form-label {
+    padding: 17px 49px;
+  }
+
+  .modal-content__button {
+    width: 350px;
+  }
+}

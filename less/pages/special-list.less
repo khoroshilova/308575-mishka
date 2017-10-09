@@ -1,8 +1,8 @@
 .special-list {
   display: none;
+  margin: 0;
   padding: 0;
   list-style: none;
-  outline: 1px dotted @bg-3;
 }
 
 .special-list__link {
@@ -11,6 +11,17 @@
   text-decoration: none;
   color: @black;
 }
+
+.special-list__link[href] {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 
 .special-list__link--delivery {
   font-weight: 200;
@@ -28,6 +39,7 @@
 
   .special-list__link--delivery {
     display: block;
+    margin-top: 30px;
   }
 }
 
@@ -39,16 +51,27 @@
   }
 
   .special-list__item {
-    width: 220px;
+    width: 200px;
+    padding-top: 20px;
   }
 
-  .special-list__item:last-child {
-    width: 270px;
-    margin-left: auto;
-    text-align: right;
+  .special-list__item {
+    &:last-child {
+      width: 270px;
+      margin-left: auto;
+      text-align: right;
+    }
   }
 
   .special-list__link {
     display: block;
+  }
+
+  .special-list__link--sale {
+      padding-left: 35px;
+  }
+
+  .special-list__link--delivery {
+    margin-top: 0;
   }
 }
