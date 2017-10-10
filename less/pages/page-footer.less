@@ -6,7 +6,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 30px;
+  width: 260px;
+  margin: 0 auto;
 }
 
 .page-footer__logo {
@@ -21,7 +22,7 @@
   .page-footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 50px;
+    width: 668px;
   }
 
   .page-footer__logo {
@@ -35,5 +36,11 @@
 
   .page-footer__copyright {
     width: 220px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    width: 1050px;
   }
 }
