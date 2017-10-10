@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -90,11 +90,11 @@
     </header>
 
     <main class="page-main">
-      <section class="banner">
-        <h1 class="banner__title">Милые штуки ручной
-          <br>работы для дома</h1>
-      </section>
       <section class="category">
+        <div class="category__banner">
+          <h1 class="category__banner-title">Милые штуки ручной
+            <br>работы для дома</h1>
+        </div>
         <h2 class="visually-hidden">Категории товаров</h2>
         <div class="category__list">
           <a class="category__link category__link--interior" href="catalog.html">Предметы интерьера
@@ -398,7 +398,7 @@
             <a class="contacts__write-us button" href="#">Напишите нам</a>
           </div>
         </div>
-        <picture>
+        <picture class="contacts__map">
           <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg">
           <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg">
           <img src="img/map-mobile@1x.jpg" alt="Как нас найти">

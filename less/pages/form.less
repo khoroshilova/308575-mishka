@@ -12,7 +12,8 @@
 
 .form__text {
   display: block;
-  margin: 0;
+  width: 260px;
+  margin: 0 auto;
   margin-bottom: 25px;
   padding: 0 30px;
   font-size: 13px;
@@ -23,7 +24,8 @@
   display: flex;
   flex-direction: column;
   width: 260px;
-  margin: 0 0 30px 0;
+  margin: 0 auto;
+  margin-bottom: 30px;
   padding: 0 30px;
 }
 
@@ -183,6 +185,7 @@
 
 .form__wrapper {
   width: 260px;
+  margin: 0 auto;
   margin-bottom: 56px;
   padding: 0 30px;
 }
@@ -209,6 +212,7 @@
   }
 
   .form__text {
+    width: 668px;
     padding: 0 50px;
     font-size: 17px;
     line-height: 30px;
@@ -242,16 +246,6 @@
     font-size: 19px;
   }
 
-  .form__wrapper {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 50px;
-  }
-
-  .form__fieldset--color {
-    margin: 0;
-  }
-
   .form__wrapper-block--color {
     flex-direction: row;
     flex-wrap: wrap;
@@ -283,8 +277,8 @@
   }
 
   .form__label--tel,
-   .form__label--email,
-   .form__label--wishes {
+  .form__label--email,
+  .form__label--wishes {
     padding: 0;
   }
 
@@ -296,8 +290,10 @@
 
   .form__wrapper {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 668px;
+    padding: 0 50px;
   }
 
   .form__text-required {
