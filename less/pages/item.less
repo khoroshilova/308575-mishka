@@ -1,41 +1,104 @@
 .item {
   display: flex;
   flex-direction: column;
-  outline: 1px dotted red;
+  margin-bottom: 30px;
+  border: 1px solid @gray-shadow;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 @opacity-01;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 @opacity-01;
+  }
 }
 
 .item__image {
   width: 260px;
   height: 195px;
+  margin-bottom: 30px;
   text-align: center;
-  background-color: @bg-1;
+}
+
+.item__description {
+  width: 205px;
+  margin: 0 auto;
 }
 
 .item__title {
   display: block;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
   font-size: 17px;
   font-weight: bold;
+  text-decoration: none;
+  color: @black;
+  cursor: pointer;
+
+  &:hover {
+    color: @opacity-06;
+  }
+
+  &:active {
+    color: @opacity-03;
+  }
 }
 
 .item__parameters {
+  display: block;
+  margin: 0;
+  padding: 0;
   font-size: 13px;
   line-height: 30px;
   color: @gray-light;
 }
 
 .item__order {
+  display: flex;
+  justify-content: space-between;
+  width: 208px;
+  margin-top: 25px;
+  padding-top: 25px;
+  padding-bottom: 28px;
   border-top: 1px solid @gray-shadow;
 }
 
 .item__price {
+  display: block;
+  margin: 0;
+  padding: 0;
   font-size: 15px;
   line-height: 24px;
   font-weight: bold;
 }
 
 .item__cart {
+  position: relative;
+  display: block;
+  padding-left: 20px;
   font-size: 0;
   text-decoration: none;
+
+  &:hover {
+    .item__cart--icon {
+      fill: @tiffany;
+    }
+  }
+
+  &:active {
+    .item__cart--icon {
+      fill: @tiffany-lighten;
+    }
+  }
+}
+
+.item__cart--icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: @opacity-02;
 }
 
 
@@ -43,16 +106,20 @@
   .item {
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 50px;
   }
 
   .item__image {
     width: 334px;
     height: 334px;
+    margin-bottom: 0;
   }
 
   .item__description {
     display: flex;
     flex-direction: column;
+    width: 272px;
+    margin-top: 25px;
   }
 
   .item__title {
@@ -64,6 +131,7 @@
   }
 
   .item__order {
+    width: 272px;
     margin-top: auto;
   }
 
@@ -75,14 +143,25 @@
 @media (min-width: @desktop-width) {
   .item {
     flex-direction: column;
+    justify-content: flex-start;
   }
 
   .item__image {
     width: 316px;
     height: 462px;
+    margin-bottom: 30px;
   }
 
-  .item__title {
-    width: 316px;
+  .item__description {
+    width: 259px;
+    flex-grow: 1;
+  }
+
+  .item__parameters {
+    margin-bottom: 20px;
+  }
+
+  .item__order {
+    width: 259px;
   }
 }

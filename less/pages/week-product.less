@@ -1,9 +1,10 @@
 .week-product {
   display: flex;
   flex-direction: column;
+  width: 320px;
   margin: 0 auto;
+  margin-bottom: 35px;
   padding: 0 30px;
-  outline: 1px dotted red;
 }
 
 .week-product__wrapper-title {
@@ -12,6 +13,9 @@
 }
 
 .week-product__title {
+  display: block;
+  margin: 0;
+  margin-bottom: 30px;
   font-size: 17px;
   font-weight: bold;
   line-height: 20px;
@@ -20,6 +24,9 @@
 }
 
 .week-product__name {
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
   order: -1;
   font-size: 25px;
   font-weight: bold;
@@ -27,19 +34,40 @@
 }
 
 .week-product__description-text {
+  display: inline-block;
+  vertical-align: top;
+  width: 260px;
   font-size: 15px;
   color: @gray-light;
 }
 
 .week-product__parameters {
+  width: 260px;
+  margin-bottom: 26px;
   font-size: 15px;
   line-height: 20px;
   color: @gray-light;
+  border-collapse: collapse;
+}
+
+.week-product__row {
+  border-bottom: 1px solid @gray-shadow;
+}
+
+.week-product__value,
+.week-product__field {
+  padding: 10px 0;
+}
+
+.week-product__wrapper-order {
+  width: 260px;
+  text-align: center;
 }
 
 .week-product__price {
   font-size: 17px;
   font-weight: bold;
+  color: @gray-light;
 }
 
 .week-product__wrapper-image-tab,
@@ -49,12 +77,21 @@
 
 @media (min-width: @tablet-width) {
   .week-product {
+    width: 668px;
+    margin-bottom: 52px;
     padding: 0 50px;
   }
 
   .week-product__wrapper-title {
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 56px;
+  }
+
+  .week-product__title {
+    width: 80px;
+    padding-top: 10px;
+    text-align: center;
   }
 
   .week-product__name {
@@ -68,13 +105,18 @@
     align-items: center;
   }
 
-  .week-product__description {
-    width: 334px;
-  }
-
   .week-product__description-text {
+    width: 290px;
     font-size: 17px;
     line-height: 30px;
+  }
+
+  .week-product__parameters {
+    width: 290px;
+  }
+
+  .week-product__price {
+    font-size: 20px;
   }
 
   .week-product__wrapper-image-mob {
@@ -89,21 +131,28 @@
 
 @media (min-width: @desktop-width) {
   .week-product {
-    padding: 0 100px;
+    width: 1050px;
+    margin-bottom: 72px;
+    padding-top: 80px;
   }
 
   .week-product__wrapper-title {
     flex-direction: row-reverse;
-    width: 700px;
+    justify-content: flex-end;
+    margin-left: 44px;
+    margin-bottom: 0;
+    z-index: 3;
   }
 
   .week-product__name {
+    margin-left: 44px;
     font-size: 53px;
     line-height: 57px;
   }
 
   .week-product__wrapper {
     justify-content: flex-end;
+    margin-top: -110px;
   }
 
   .week-product__wrapper-image-tab {
@@ -112,5 +161,6 @@
 
   .week-product__wrapper-image-desk {
     display: block;
+    margin-left: 56px;
   }
 }

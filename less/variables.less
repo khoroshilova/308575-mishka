@@ -1,12 +1,22 @@
 @black: #000000;
-@gray: rgba(0, 0, 0, 0.6);
+@opacity-06: rgba(0, 0, 0, 0.6);
+@opacity-03: rgba(0, 0, 0, 0.3);
+@opacity-02: rgba(0, 0, 0, 0.2);
+@opacity-01: rgba(0, 0, 0, 0.1);
 @gray-shadow: #ececec;
 @gray-light: #444444;
 @gray-form: rgba(68, 68, 68, 0.3);
 @gray-middle: #f1f1f1;
 @tiffany: #63d1bb;
+@tiffany-middle-07: rgba(20, 144, 128, 0.7);
+@tiffany-middle-05: rgba(20, 144, 128, 0.5);
+@tiffany-middle-03: rgba(20, 144, 128, 0.3);
 @tiffany-darken: #56c3b2;
+@tiffany-lighten: rgba(99, 209, 187, 0.3);
+@tiffany-hover: #59d5bb;
+@tiffany-darken-hover: #46c1ae;
 @white: #ffffff;
+@opacity-w3: rgba(255, 255, 255, 0.3);
 @bg-light-gray: #f9f9f9;
 
 @bg-1: rgba(114, 69, 172, 0.3);
@@ -15,4 +25,81 @@
 @bg-4: rgba(3, 41, 214, 0.3);
 
 @tablet-width: 768px;
-@desktop-width: 1250px;
+@desktop-width: 1150px;
+@mobile-width-only: 767px;
+
+.placeholder-search {
+  &::-webkit-input-placeholder {
+    color: #000000;
+  }
+
+  &::-moz-placeholder {
+    color: #000000;
+  }
+
+  &:-moz-placeholder {
+    color: #000000;
+  }
+
+  :-ms-input-placeholder {
+    color: #000000;
+  }
+}
+
+.placeholder-search-hover {
+  &:hover {
+    &::-webkit-input-placeholder {
+      opacity: 0.6;
+    }
+
+    &::-moz-placeholder {
+      opacity: 0.6;
+    }
+
+    &:-moz-placeholder {
+      opacity: 0.6;
+    }
+
+    :-ms-input-placeholder {
+      opacity: 0.6;
+    }
+  }
+}
+
+.placeholder-search-focus {
+  &:focus {
+    &::-webkit-input-placeholder {
+      opacity: 0.3;
+    }
+
+    &::-moz-placeholder {
+      opacity: 0.3;
+    }
+
+    &:-moz-placeholder {
+      opacity: 0.3;
+    }
+
+    :-ms-input-placeholder {
+      opacity: 0.3;
+    }
+  }
+}
+
+.placeholder-search-tab {
+  &::-webkit-input-placeholder {
+    font-size: 0;
+  }
+
+  &::-moz-placeholder {
+    font-size: 0;
+  }
+
+  &:-moz-placeholder {
+    font-size: 0;
+  }
+
+  :-ms-input-placeholder {
+    font-size: 0;
+  }
+}
