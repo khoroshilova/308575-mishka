@@ -5,7 +5,8 @@
   border: 1px solid @gray-shadow;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: 0 6px 10px 0 @opacity-01;
   }
 
@@ -14,11 +15,10 @@
   }
 }
 
-.item__image {
+.item__picture {
   width: 260px;
   height: 195px;
   margin-bottom: 30px;
-  text-align: center;
 }
 
 .item__description {
@@ -37,7 +37,8 @@
   color: @black;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: @opacity-06;
   }
 
@@ -81,7 +82,8 @@
   font-size: 0;
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     .item__cart--icon {
       fill: @tiffany;
     }
@@ -109,7 +111,7 @@
     margin-bottom: 50px;
   }
 
-  .item__image {
+  .item__picture {
     width: 334px;
     height: 334px;
     margin-bottom: 0;
@@ -146,7 +148,7 @@
     justify-content: flex-start;
   }
 
-  .item__image {
+  .item__picture {
     width: 316px;
     height: 462px;
     margin-bottom: 30px;

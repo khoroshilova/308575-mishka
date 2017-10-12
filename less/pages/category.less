@@ -10,6 +10,11 @@
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: 1150px auto;
+  }
 }
 
 .category__banner-title {
@@ -65,7 +70,8 @@
 .category__link--interior {
   background-color: @tiffany;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @tiffany-hover;
     box-shadow: 0 -3px 0 0 @tiffany-hover, 0 2px 0 0 @tiffany-hover;
 
@@ -78,7 +84,8 @@
 .category__link--toys {
   background-color: @tiffany-darken;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @tiffany-darken-hover;
     box-shadow: 0 -3px 0 0 @tiffany-darken-hover, 0 2px 0 0 @tiffany-darken-hover;
 
@@ -94,7 +101,12 @@
   }
 
   .category__banner {
-    background-image: url("../img/hero-desktop.jpg");
+    background-image: url("../img/hero-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+      background-size: 2300px auto;
+    }
   }
 
   .category__banner-title {
