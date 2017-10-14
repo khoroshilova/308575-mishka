@@ -97,11 +97,13 @@
   .user-list__form {
     width: 36px;
     padding-top: 54px;
+    padding-bottom: 24px;
+    padding-left: 48px;
   }
 
   .user-list__form-label {
-    top: 32px;
-    left: 30px;
+    top: 29px;
+    left: 34px;
   }
 
   .user-list__search {
@@ -113,10 +115,25 @@
   }
 
   .user-list__link {
-    padding-left: 80px;
+    padding: 23px 0 24px 81px;
   }
 
   .user-list__icon-cart {
+    top: 26px;
     left: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-list__form-label {
+    left: 32px;
+  }
+
+  .user-list__icon-cart {
+    left: 29px;
+  }
+
+  .user-list__link {
+    padding-right: 2px;
   }
 }

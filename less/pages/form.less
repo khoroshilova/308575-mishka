@@ -1,8 +1,12 @@
+.form {
+  margin-top: 1px;
+}
+
 .form__title {
   display: block;
   margin: 0;
-  margin-bottom: 28px;
-  padding: 75px 0;
+  margin-bottom: 22px;
+  padding: 72px 0 76px 0;
   font-size: 27px;
   line-height: 30px;
   font-weight: bold;
@@ -14,7 +18,7 @@
   display: block;
   width: 260px;
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 11px;
   padding: 0 30px;
   font-size: 13px;
   color: @gray-light;
@@ -29,7 +33,24 @@
   padding: 0 30px;
 }
 
+.form__fieldset--type {
+  margin-bottom: 18px;
+}
+
+.form__fieldset--color {
+  margin-bottom: -3px;
+}
+
 .form__fieldset--customer {
+  margin-bottom: 0;
+}
+
+.form__fieldset--tel,
+.form__fieldset--email {
+  margin-bottom: 0;
+}
+
+.form__fieldset--wishes {
   margin-bottom: 0;
 }
 
@@ -37,12 +58,21 @@
   display: block;
   position: relative;
   width: 260px;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
   font-size: 17px;
   line-height: 16px;
   font-weight: bold;
   text-transform: uppercase;
   color: @tiffany;
+}
+
+.form__caption--tel,
+.form__caption--email {
+  margin-bottom: 11px;
+}
+
+.form__caption--wishes {
+  margin-bottom: 15px;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -76,6 +106,37 @@
   cursor: pointer;
 }
 
+.form__label--type {
+  margin-bottom: 3px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    background-color: @white;
+    border: 2px solid @black;
+    border-radius: 50%;
+  }
+}
+
+.form__label--color {
+  margin-bottom: 23px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+    border: 2px solid @black;
+  }
+}
+
 .form__label--tel,
 .form__label--email,
 .form__label--wishes {
@@ -88,20 +149,6 @@
 .form__checkbox {
   position: absolute;
   opacity: 0;
-}
-
-.form__label--type {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 36px;
-    height: 36px;
-    background-color: @white;
-    border: 2px solid @black;
-    border-radius: 50%;
-  }
 }
 
 .form__label--type,
@@ -132,19 +179,6 @@
   }
 }
 
-.form__label--color {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 36px;
-    height: 36px;
-    background-color: transparent;
-    border: 2px solid @black;
-  }
-}
-
 .form__checkbox:checked + .form__label--color {
   &::after {
     content: "";
@@ -162,14 +196,14 @@
 
 .form__label--user-name {
   padding-left: 0;
-  padding-top: 0;
-  margin-bottom: 0;
+  padding-top: 4px;
+  margin-bottom: 5px;
 }
 
 .form__customer-info {
   width: 256px;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
   font-size: 17px;
   line-height: 18px;
   font-weight: 200;
@@ -186,7 +220,8 @@
 }
 
 .form__customer-info--wishes {
-  padding-bottom: 90px;
+  width: 241px;
+  padding: 14px 0 88px 15px;
   box-shadow: none;
   border: 2px solid @black;
 
@@ -200,7 +235,7 @@
 .form__wrapper {
   width: 260px;
   margin: 0 auto;
-  margin-bottom: 56px;
+  margin-bottom: 54px;
   padding: 0 30px;
 }
 
@@ -216,17 +251,20 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    margin-top: -84px;
+    margin-top: -73px;
   }
 
   .form__title {
-    padding-top: 105px;
+    margin-bottom: 74px;
+    padding-top: 95px;
+    padding-bottom: 80px;
     font-size: 43px;
     line-height: 50px;
   }
 
   .form__text {
     width: 668px;
+    margin-bottom: 57px;
     padding: 0 50px;
     font-size: 17px;
     line-height: 30px;
@@ -237,48 +275,127 @@
     width: 668px;
   }
 
+  .form__fieldset--type {
+    position: relative;
+    margin-bottom: 26px;
+  }
+
+  .form__fieldset--color {
+    margin-bottom: 0;
+  }
+
+  .form__fieldset--tel,
+  .form__fieldset--email {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .form__fieldset--wishes {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  .form__zigzag {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 768px;
+    height: 34px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    z-index: 6;
+  }
+
   .form__caption {
     width: 167px;
+    margin-top: 17px;
   }
 
   .form__caption--user {
-    margin-top: 0;
+    margin-top: 27px;
+  }
+
+  .form__caption--tel {
+    margin-top: 7px;
+  }
+
+  .form__caption--email {
+    margin-top: 6px;
   }
 
   .form__wrapper-fieldset {
     padding-top: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 26px;
     background-color: @gray-middle;
   }
 
   .form__wrapper-fieldset--customer {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 61px;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
   }
 
   .form__label {
     font-size: 19px;
   }
 
-  .form__wrapper-block--color {
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 500px;
+  .form__label--type {
+    margin-bottom: 28px;
+    padding: 15px 0 15px 80px;
+
+    &::before {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .form__radio:checked + .form__label--type {
+    &::after {
+      top: 15px;
+      left: 15px;
+      width: 21px;
+      height: 21px;
+    }
   }
 
   .form__label--color {
-    width: 190px;
+    width: 157px;
+    margin-bottom: 28px;
+    padding: 15px 0 15px 81px;
+
+    &::before {
+      width: 50px;
+      height: 48px;
+    }
+  }
+
+  .form__checkbox:checked + .form__label--color {
+    &::after {
+      top: 17px;
+      left: 13px;
+      width: 38px;
+    }
+  }
+
+  .form__wrapper-block--color {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 500px;
   }
 
   .form__fieldset--customer {
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
   }
 
   .form__wrapper-block--user-name {
     flex-direction: row;
     flex-wrap: wrap;
     width: 500px;
+    margin-top: 21px;
 
     .form__label {
       margin-right: 25px;
@@ -298,9 +415,15 @@
 
   .form__customer-info {
     flex-grow: 1;
-    width: 358px;
-    padding-left: 15px;
-    margin-bottom: 30px;
+    width: 357px;
+    margin-bottom: 35px;
+    padding: 4px 0 19px 16px;
+  }
+
+  .form__customer-info--wishes {
+    padding-top: 14px;
+    padding-bottom: 88px;
+    margin-bottom: 38px;
   }
 
   .form__wrapper {
@@ -308,6 +431,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 668px;
+    margin-bottom: 50px;
     padding: 0 50px;
   }
 
@@ -328,37 +452,54 @@
 
 @media (min-width: @desktop-width) {
   .form {
-    margin-top: -45px;
+    margin-top: -43px;
   }
 
   .form__title {
+    margin-bottom: 124px;
+    padding-bottom: 102px;
     font-size: 53px;
     line-height: 57px;
   }
 
   .form__text {
-    padding: 0 210px;
+    width: 677px;
+    margin-bottom: 56px;
+    padding-right: 74px;
   }
 
   .form__wrapper {
-    padding: 0 225px;
+    width: 701px;
   }
 
   .form__fieldset {
     width: 1050px;
   }
 
+  .form__fieldset--type {
+    margin-bottom: 25px;
+  }
+
+  .form__fieldset--wishes {
+    margin-bottom: 11px;
+  }
+
+  .form__zigzag {
+    top: -255px;
+    width: 1150px;
+  }
+
   .form__caption {
-    width: 175px;
-    text-align: center;
+    width: 113px;
+    margin-left: 62px;
   }
 
   .form__wrapper-block--color {
-    width: 875px;
+    width: 785px;
   }
 
   .form__label--color {
-    width: 202px;
+    width: 180px;
   }
 
   .form__wrapper-block--user-name {

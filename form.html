@@ -89,9 +89,11 @@
 
     <main class="form">
       <h1 class="form__title">Вязание на заказ</h1>
-      <p class="form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+
+      <p class="form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся вами, чтобы уточнить детали.</p>
       <form class="form__order" action="https://echo.htmlacademy.ru" method="get">
         <section class="form__fieldset form__fieldset--type">
+          <div class="form__zigzag"></div>
           <h2 class="form__caption">Тип</h2>
           <div class="form__wrapper-block">
             <input class="form__radio" id="interior" type="radio" name="groups" value="interior" checked>
@@ -132,23 +134,23 @@
           </div>
         </section>
         <div class="form__wrapper-fieldset form__wrapper-fieldset--customer">
-          <section class="form__fieldset form__fieldset--customer">
-            <h2 class="form__caption form__caption--user">Тел</h2>
+          <section class="form__fieldset form__fieldset--tel">
+            <h2 class="form__caption form__caption--tel">Тел</h2>
             <div class="form__wrapper-block form__wrapper-block--user-info">
               <label class="form__label form__label--tel" for="tel"></label>
               <input class="form__customer-info" id="tel" type="tel" name="tel" placeholder="+7 ХХХ ХХ ХХ*" required>
             </div>
           </section>
-          <section class="form__fieldset form__fieldset--customer">
-            <h2 class="form__caption form__caption--user">E-mail</h2>
+          <section class="form__fieldset form__fieldset--email">
+            <h2 class="form__caption form__caption--email">E-mail</h2>
             <div class="form__wrapper-block form__wrapper-block--user-info">
               <label class="form__label form__label--email" for="email"></label>
               <input class="form__customer-info" id="email" type="email" name="email" placeholder="Ваш Email*" required>
             </div>
           </section>
         </div>
-        <section class="form__fieldset form__fieldset--customer">
-          <h2 class="form__caption form__caption--user">Доп</h2>
+        <section class="form__fieldset form__fieldset--wishes">
+          <h2 class="form__caption form__caption--wishes">Доп</h2>
           <div class="form__wrapper-block form__wrapper-block--user-info">
             <label class="form__label form__label--wishes" for="text"></label>
             <textarea class="form__customer-info form__customer-info--wishes" id="text" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
@@ -200,7 +202,7 @@
             <li class="social__item">
               <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
                 <svg
-                  class="social__icon"
+                  class="social__icon social__icon--instagram"
                   version="1.1"
                   id="Layer_1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +225,7 @@
             <li class="social__item">
               <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
                 <svg
-                  class="social__icon"
+                  class="social__icon social__icon--facebook"
                   version="1.1"
                   id="Layer_1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -246,7 +248,7 @@
             <li class="social__item">
               <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">
                 <svg
-                  class="social__icon"
+                  class="social__icon social__icon--twitter"
                   version="1.1"
                   id="Layer_1"
                   xmlns="http://www.w3.org/2000/svg"

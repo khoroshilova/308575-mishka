@@ -1,14 +1,20 @@
 .features {
   width: 260px;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   padding: 0 30px;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
 }
 
 .features__title {
   display: block;
   margin: 0;
-  padding: 30px 0;
+  margin-bottom: 31px;
+  padding: 0;
+  padding-top: 33px;
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
@@ -26,16 +32,64 @@
 }
 
 .features__item {
-  padding: 30px 0;
+  margin-bottom: 30px;
+}
+
+.features__icon-wrapper {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .features__icon {
-  width: 55px;
-  height: 38px;
   fill: @tiffany;
 }
 
+.features__icon--eco {
+  width: 33px;
+  height: 38px;
+  padding-left: 7px;
+}
+
+.features__icon--price {
+  width: 47px;
+  height: 27px;
+  padding-bottom: 9px;
+}
+
+.features__icon--likes {
+  width: 34px;
+  height: 27px;
+  padding-top: 5px;
+  padding-left: 7px;
+  padding-bottom: 5px;
+}
+
+.features__icon--hand-made {
+  width: 34px;
+  height: 35px;
+  padding-left: 4px;
+}
+
+.features__icon--manufacture {
+  width: 55px;
+  height: 23px;
+  padding-top: 3px;
+  padding-bottom: 10px;
+}
+
+.features__icon--gift {
+  width: 33px;
+  height: 32px;
+  padding-left: 3px;
+  padding-bottom: 4px;
+}
+
 .features__description {
+  display: block;
+  margin: 0;
+  padding: 0;
   font-size: 17px;
   line-height: 20px;
   font-weight: bold;
@@ -44,6 +98,7 @@
 @media (min-width: @tablet-width) {
   .features {
     width: 668px;
+    margin-bottom: 22px;
     padding: 0 50px;
   }
 
@@ -53,7 +108,8 @@
   }
 
   .features__title {
-    padding: 55px 0 45px 0;
+    margin-bottom: 37px;
+    padding: 67px 0 10px 0;
     font-size: 43px;
     line-height: 50px;
   }
@@ -64,19 +120,32 @@
   }
 
   .features__item {
+    margin-bottom: 59px;
     width: 334px;
+  }
+
+  .features__icon--eco {
+    padding-left: 8px;
+  }
+
+  .features__icon--price {
+    padding-bottom: 8px;
+  }
+
+  .features__icon--hand-made {
+    padding-top: 3px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .features {
     width: 1050px;
-    padding: 0 225px;
+    margin-bottom: 29px;
   }
 
   .features__title {
-    margin-left: 160px;
-    padding: 65px 0 40px 0;
+    margin-left: 170px;
+    padding: 82px 0 11px 0;
     font-size: 53px;
     line-height: 57px;
   }

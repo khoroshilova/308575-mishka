@@ -1,8 +1,9 @@
 .catalog__title {
   display: block;
   margin: 0;
+  margin-top: 2px;
   margin-bottom: 30px;
-  padding: 75px 0;
+  padding: 72px 0 75px 0;
   font-size: 27px;
   line-height: 30px;
   font-weight: bold;
@@ -23,19 +24,34 @@
 
 @media (min-width: @tablet-width) {
   .catalog {
-    margin-top: -84px;
+    margin-top: -75px;
   }
 
   .catalog__title {
-    margin-bottom: 80px;
-    padding-top: 105px;
+    margin-bottom: 82px;
+    padding-top: 97px;
+    padding-bottom: 77px;
     font-size: 43px;
     line-height: 50px;
   }
 
   .catalog__wrapper {
-    width: 768px;
+    position: relative;
+    width: 668px;
     padding: 0 50px;
+  }
+
+  .catalog__zigzag {
+    position: absolute;
+    top: -91px;
+    left: 0;
+    width: 768px;
+    height: 34px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: top;
+    background-size: contain;
+    z-index: 6;
   }
 }
 
@@ -45,7 +61,8 @@
   }
 
   .catalog__title {
-    margin-bottom: 130px;
+    margin-bottom: 131px;
+    padding-bottom: 99px;
     font-size: 53px;
     line-height: 57px;
   }
@@ -54,9 +71,15 @@
     width: 1050px;
   }
 
+  .catalog__zigzag {
+    top: -143px;
+    width: 1050px;
+  }
+
   .catalog__items {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 5px;
   }
 }
