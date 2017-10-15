@@ -35,15 +35,59 @@
 .category__list {
   display: flex;
   flex-direction: column;
-  width: 320px;
-  margin: 0 auto;
+}
+
+.category__item {
+  padding: 0 30px;
+  cursor: pointer;
+}
+
+.category__item--interior {
+  background-color: @tiffany;
+
+  &:hover,
+  &:focus {
+    background-color: @tiffany-hover;
+    box-shadow: 0 -3px 0 0 @tiffany-hover, 0 2px 0 0 @tiffany-hover;
+
+    .category__link--interior {
+      padding-top: 21px;
+      padding-bottom: 34px;
+
+      .category__icon--interior {
+        top: 18px;
+        fill: @tiffany-middle-07;
+      }
+    }
+  }
+}
+
+.category__item--toys {
+  background-color: @tiffany-darken;
+
+  &:hover,
+  &:focus {
+    background-color: @tiffany-darken-hover;
+    box-shadow: 0 -3px 0 0 @tiffany-darken-hover, 0 2px 0 0 @tiffany-darken-hover;
+
+    .category__link--toys {
+      padding-top: 21px;
+      padding-bottom: 34px;
+
+      .category__icon--toys {
+        top: 15px;
+        fill: @tiffany-middle-07;
+      }
+    }
+  }
 }
 
 .category__link {
   position: relative;
-  display: inline-block;
-  vertical-align: top;
-  padding: 26px 177px 29px 30px;
+  width: 90px;
+  display: block;
+  margin: auto;
+  padding: 26px 169px 29px 0;
   font-size: 19px;
   font-weight: bold;
   text-decoration: none;
@@ -60,7 +104,6 @@
 
 .category__icon {
   position: absolute;
-  margin-right: 30px;
   fill: @tiffany-middle-05;
 }
 
@@ -76,34 +119,6 @@
   right: -4px;
   width: 61px;
   height: 61px;
-}
-
-.category__link--interior {
-  background-color: @tiffany;
-
-  &:hover,
-  &:focus {
-    background-color: @tiffany-hover;
-    box-shadow: 0 -3px 0 0 @tiffany-hover, 0 2px 0 0 @tiffany-hover;
-
-    .category__icon {
-      fill: @tiffany-middle-07;
-    }
-  }
-}
-
-.category__link--toys {
-  background-color: @tiffany-darken;
-
-  &:hover,
-  &:focus {
-    background-color: @tiffany-darken-hover;
-    box-shadow: 0 -3px 0 0 @tiffany-darken-hover, 0 2px 0 0 @tiffany-darken-hover;
-
-    .category__icon {
-      fill: @tiffany-middle-07;
-    }
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -130,17 +145,13 @@
 
   .category__list {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 668px;
   }
 
   .category__link {
-    flex-grow: 1;
-    width: 334px;
-    padding: 28px 170px 30px 36px;
-    font-size: 20px;
-    line-height: 30px;
+    margin: 0;
+    padding: 31px 178px 40px 6px;
   }
 
   .category__icon--interior {
@@ -151,6 +162,20 @@
   .category__icon--toys {
     top: 30px;
     right: 5px;
+  }
+
+  .category__item {
+    &:hover,
+    &:focus {
+      .category__link {
+        padding-top: 26px;
+        padding-bottom: 45px;
+
+        .category__icon {
+          top: 25px;
+        }
+      }
+    }
   }
 }
 
@@ -172,11 +197,8 @@
     line-height: 57px;
   }
 
-  .category__list {
-    width: 1050px;
-  }
-
   .category__link {
-    padding-right: 350px;
+    padding-right: 367px;
+    padding-left: 7px;
   }
 }
