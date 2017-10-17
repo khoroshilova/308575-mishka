@@ -1,43 +1,53 @@
 .copyright {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-}
-
-.copyright__text {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0;
-  margin-right: 28px;
+  width: 185px;
   padding: 0;
-  font-size: 19px;
-  line-height: 18px;
-  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .copyright__link {
   position: relative;
   display: block;
-  width: 30px;
-  height: 30px;
-  font-size: 0;
+  padding: 27px 0;
+  font-size: 19px;
+  line-height: 20px;
+  font-weight: bold;
   text-decoration: none;
-  cursor: pointer;
-}
+  color: @black;
 
-.copyright__link--academy {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 27px;
-    height: 34px;
-    background: url("../img/logo-htmlacademy.svg") no-repeat 0 0;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
   }
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.copyright__link-academy {
+  position: absolute;
+  top: 22px;
+  right: 1px;
+  fill: @tiffany;
+
+  &:hover,
+  &:focus {
+    fill: @tiffany-darken-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__link {
+    padding-top: 32px;
+    padding-left: 2px;
+  }
+
+  .copyright__link-academy {
+    top: 28px;
+    right: 0;
   }
 }

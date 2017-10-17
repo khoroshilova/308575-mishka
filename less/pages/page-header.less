@@ -1,29 +1,65 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 260px;
   margin: 0 auto;
 }
 
 .page-header__logo {
   align-self: center;
-  margin: 20px 0;
+  height: 35px;
+  margin: 14px 2px 20px 0;
+}
+
+.page-header__logo[href] {
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
     flex-direction: row;
+    position: relative;
     width: 668px;
     padding: 0 50px;
   }
 
   .page-header__logo {
-    display: none;
+    position: absolute;
+    top: 14px;
+    left: 48px;
+    width: 113px;
+    height: 46px;
+    margin: 0;
+    z-index: 5;
+  }
+
+  .page-header__logo img {
+    width: 113px;
+    height: 46px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
     width: 1050px;
+  }
+
+  .page-header__logo {
+    top: 1px;
+    left: 500px;
+    width: 149px;
+    height: 73px;
+  }
+
+  .page-header__logo img {
+    width: 149px;
+    height: 72px;
   }
 }

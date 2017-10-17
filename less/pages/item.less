@@ -1,11 +1,12 @@
 .item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
-  border: 1px solid @gray-shadow;
+  margin-bottom: 32px;
+  outline: 1px solid @gray-shadow;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: 0 6px 10px 0 @opacity-01;
   }
 
@@ -14,11 +15,10 @@
   }
 }
 
-.item__image {
+.item__picture {
   width: 260px;
   height: 195px;
-  margin-bottom: 30px;
-  text-align: center;
+  margin-bottom: 27px;
 }
 
 .item__description {
@@ -29,7 +29,7 @@
 .item__title {
   display: block;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   padding: 0;
   font-size: 17px;
   font-weight: bold;
@@ -37,7 +37,8 @@
   color: @black;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: @opacity-06;
   }
 
@@ -59,9 +60,9 @@
   display: flex;
   justify-content: space-between;
   width: 208px;
-  margin-top: 25px;
-  padding-top: 25px;
-  padding-bottom: 28px;
+  margin-top: 18px;
+  padding-top: 21px;
+  padding-bottom: 27px;
   border-top: 1px solid @gray-shadow;
 }
 
@@ -77,11 +78,12 @@
 .item__cart {
   position: relative;
   display: block;
-  padding-left: 20px;
+  padding-left: 22px;
   font-size: 0;
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     .item__cart--icon {
       fill: @tiffany;
     }
@@ -106,24 +108,24 @@
   .item {
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
   }
 
-  .item__image {
+  .item__picture {
     width: 334px;
-    height: 334px;
+    height: 333px;
     margin-bottom: 0;
   }
 
   .item__description {
     display: flex;
     flex-direction: column;
-    width: 272px;
-    margin-top: 25px;
+    width: 278px;
   }
 
   .item__title {
     font-size: 20px;
+    padding-top: 25px;
   }
 
   .item__parameters {
@@ -136,7 +138,14 @@
   }
 
   .item__price {
+    padding-left: 4px;
+    padding-top: 1px;
     font-size: 17px;
+  }
+
+  .item__cart--icon {
+    top: 1px;
+    left: 3px;
   }
 }
 
@@ -146,10 +155,14 @@
     justify-content: flex-start;
   }
 
-  .item__image {
+  .item__picture {
     width: 316px;
     height: 462px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
+  }
+
+  .item__title {
+    padding-top: 26px;
   }
 
   .item__description {
@@ -158,10 +171,18 @@
   }
 
   .item__parameters {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
   }
 
   .item__order {
     width: 259px;
+  }
+
+  .item__price {
+    padding-left: 0;
+  }
+
+  .item__cart {
+    padding-left: 27px;
   }
 }
