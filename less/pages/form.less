@@ -108,6 +108,7 @@
 .form__wrapper-block--user-name {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .form__label {
@@ -149,32 +150,6 @@
     height: 35px;
     background-color: transparent;
     border: 2px solid @black;
-  }
-}
-
-.form__label--tel,
-.form__label--email,
-.form__label--wishes {
-  font-size: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.form__label--tel {
-  .form__icon-tel {
-    position: absolute;
-    top: 5px;
-    right: 8px;
-    opacity: 0.2;
-  }
-}
-
-.form__label--email {
-  .form__icon-email {
-    position: absolute;
-    top: 6px;
-    right: 4px;
-    opacity: 0.2;
   }
 }
 
@@ -233,6 +208,28 @@
   margin-bottom: 5px;
 }
 
+.form__label--tel,
+.form__label--email,
+.form__label--wishes {
+  font-size: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.form__icon-tel {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  opacity: 0.2;
+}
+
+.form__icon-email {
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  opacity: 0.2;
+}
+
 .form__customer-info {
   width: 258px;
   margin-bottom: 18px;
@@ -250,6 +247,16 @@
   &:focus {
     box-shadow: inset 0 -2px 0 0 @tiffany;
   }
+}
+
+.form__customer-info:hover + .form__icon-tel {
+  fill: @tiffany;
+  opacity: 1;
+}
+
+.form__customer-info:hover + .form__icon-email {
+  fill: @tiffany;
+  opacity: 1;
 }
 
 .form__fieldset--customer .form__customer-info {
