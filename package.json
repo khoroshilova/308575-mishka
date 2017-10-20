@@ -33,6 +33,7 @@
     "images": "gulp images",
     "webp": "gulp webp",
     "sprite": "gulp sprite",
+    "scripts": "gulp uglify",
     "start": "npm run build && gulp serve"
   },
   "browserslist": [
