@@ -6,6 +6,7 @@
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="picturefill.min.js"></script>
   </head>
   <body>
     <svg style="display: none">
@@ -161,106 +162,108 @@
       </nav>
     </header>
 
-    <main class="catalog">
-      <h1 class="catalog__title">Каталог товаров</h1>
-      <div class="catalog__wrapper">
-        <div class="catalog__zigzag"></div>
-        <section class="catalog__items">
-          <article class="catalog__item item">
-            <div class="item__picture">
-              <picture>
-                <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/photo-hare-mobile@1x.webp 1x, img/photo-hare-mobile@2x.webp 2x">
-                <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
-                <img src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик">
-              </picture>
-            </div>
-            <div class="item__description">
-              <a class="item__title" href="#">Зайчик-попрыгайчик</a>
-              <p class="item__parameters">Рост 30 см, вес 200 г</p>
-              <div class="item__order">
-                <p class="item__price">1 200 руб.</p>
-                <a class="item__cart" href="#">
-                  <svg class="item__cart--icon" width="21" height="18">
-                    <use xlink:href="#icon-cart"></use>
-                  </svg>В корзину</a>
+    <main>
+      <div class="catalog">
+        <h1 class="catalog__title">Каталог товаров</h1>
+        <div class="catalog__wrapper">
+          <div class="catalog__zigzag"></div>
+          <section class="catalog__items">
+            <article class="catalog__item item">
+              <div class="item__picture">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-hare-mobile@1x.webp 1x, img/photo-hare-mobile@2x.webp 2x">
+                  <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+                  <img src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик">
+                </picture>
               </div>
-            </div>
-          </article>
-          <article class="catalog__item item">
-            <div class="item__picture">
-              <picture>
-                <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/photo-bowl-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
-                <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
-                <img src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья">
-              </picture>
-            </div>
-            <div class="item__description">
-              <a class="item__title" href="#">Корзинка для белья</a>
-              <p class="item__parameters">Диаметр 15 см, высота 10 см</p>
-              <div class="item__order">
-                <p class="item__price">690 руб.</p>
-                <a class="item__cart" href="#">
-                  <svg class="item__cart--icon" width="21" height="18">
-                    <use xlink:href="#icon-cart"></use>
-                  </svg>В корзину</a>
+              <div class="item__description">
+                <a class="item__title" href="#">Зайчик-попрыгайчик</a>
+                <p class="item__parameters">Рост 30 см, вес 200 г</p>
+                <div class="item__order">
+                  <p class="item__price">1 200 руб.</p>
+                  <a class="item__cart cart-btn" href="#">
+                    <svg class="item__cart--icon" width="21" height="18">
+                      <use xlink:href="#icon-cart"></use>
+                    </svg>В корзину</a>
+                </div>
               </div>
-            </div>
-          </article>
-          <article class="catalog__item item">
-            <div class="item__picture">
-              <picture>
-                <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/photo-toys-mobile@1x.webp 1x, img/photo-toys-mobile@2x.webp 2x">
-                <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
-                <img src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
-              </picture>
-            </div>
-            <div class="item__description">
-              <a class="item__title" href="#">Большая корзинка
-                <br>для игрушек</a>
-              <p class="item__parameters">Диаметр 30 см, высота 30 см</p>
-              <div class="item__order">
-                <p class="item__price">1 500 руб.</p>
-                <a class="item__cart" href="#">
-                  <svg class="item__cart--icon" width="21" height="18">
-                    <use xlink:href="#icon-cart"></use>
-                  </svg>В корзину</a>
+            </article>
+            <article class="catalog__item item">
+              <div class="item__picture">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-bowl-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
+                  <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+                  <img src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья">
+                </picture>
               </div>
-            </div>
-          </article>
-        </section>
-        <section class="process">
-          <picture class="process__video">
-            <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
-            <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-            <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Процесс производства">
-          </picture>
-          <button class="process__video-button" type="button">
-            <svg class="process__icon-play" width="102" height="76">
-              <use xlink:href="#icon-play"></use>
-            </svg>
-          </button>
-          <div class="process__wrapper">
-            <h2 class="process__title">Процесс производства
-              <svg class="process__icon-video" width="32" height="32">
-                <use xlink:href="#icon-video"></use>
+              <div class="item__description">
+                <a class="item__title" href="#">Корзинка для белья</a>
+                <p class="item__parameters">Диаметр 15 см, высота 10 см</p>
+                <div class="item__order">
+                  <p class="item__price">690 руб.</p>
+                  <a class="item__cart cart-btn" href="#">
+                    <svg class="item__cart--icon" width="21" height="18">
+                      <use xlink:href="#icon-cart"></use>
+                    </svg>В корзину</a>
+                </div>
+              </div>
+            </article>
+            <article class="catalog__item item">
+              <div class="item__picture">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-toys-mobile@1x.webp 1x, img/photo-toys-mobile@2x.webp 2x">
+                  <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+                  <img src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
+                </picture>
+              </div>
+              <div class="item__description">
+                <a class="item__title" href="#">Большая корзинка
+                  <br>для игрушек</a>
+                <p class="item__parameters">Диаметр 30 см, высота 30 см</p>
+                <div class="item__order">
+                  <p class="item__price">1 500 руб.</p>
+                  <a class="item__cart cart-btn" href="#">
+                    <svg class="item__cart--icon" width="21" height="18">
+                      <use xlink:href="#icon-cart"></use>
+                    </svg>В корзину</a>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="process">
+            <picture class="process__video">
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Процесс производства">
+            </picture>
+            <button class="process__video-button" type="button">
+              <svg class="process__icon-play" width="102" height="76">
+                <use xlink:href="#icon-play"></use>
               </svg>
-            </h2>
-            <p class="process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <a class="process__order button" href="form.html">Сделать заказ</a>
-          </div>
-        </section>
+            </button>
+            <div class="process__wrapper">
+              <h2 class="process__title">Процесс производства
+                <svg class="process__icon-video" width="32" height="32">
+                  <use xlink:href="#icon-video"></use>
+                </svg>
+              </h2>
+              <p class="process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+              <a class="process__order button" href="form.html">Сделать заказ</a>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
 
@@ -303,36 +306,23 @@
       </div>
     </footer>
 
-    <section class="modal-content">
-      <h2 class="modal-content__title">Добавить в корзину</h2>
-      <p class="modal-content__text">Выберите размер:</p>
-      <form class="modal-content__form">
-        <div class="modal-content__wrapper">
-          <input class="modal-content__checkbox" id="small" type="checkbox" name="small" checked>
-          <label class="modal-content__form-label" for="small">S</label>
-          <input class="modal-content__checkbox" id="medium" type="checkbox" name="medium">
-          <label class="modal-content__form-label" for="medium">M</label>
-          <input class="modal-content__checkbox" id="large" type="checkbox" name="large">
-          <label class="modal-content__form-label" for="large">L</label>
-        </div>
-        <button class="modal-content__button" type="submit">Добавить</button>
-      </form>
+    <section class="modal">
+      <div class="modal-content">
+        <h2 class="modal-content__title">Добавить в корзину</h2>
+        <p class="modal-content__text">Выберите размер:</p>
+        <form class="modal-content__form">
+          <div class="modal-content__wrapper">
+            <input class="modal-content__checkbox" id="small" type="checkbox" name="small" checked>
+            <label class="modal-content__form-label" for="small">S</label>
+            <input class="modal-content__checkbox" id="medium" type="checkbox" name="medium">
+            <label class="modal-content__form-label" for="medium">M</label>
+            <input class="modal-content__checkbox" id="large" type="checkbox" name="large">
+            <label class="modal-content__form-label" for="large">L</label>
+          </div>
+          <button class="modal-content__button modal-close" type="submit">Добавить</button>
+        </form>
+      </div>
     </section>
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function () {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
