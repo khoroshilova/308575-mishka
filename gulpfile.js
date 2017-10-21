@@ -16,6 +16,7 @@ var include = require("posthtml-include");
 var run = require("run-sequence");
 var del = require("del");
 var uglify = require("gulp-uglify");
+var htmlmin = require("gulp-htmlmin");
 
 
 gulp.task("style", function() {
