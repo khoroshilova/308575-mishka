@@ -161,7 +161,8 @@
 
 .form__label--type,
 .form__label--color {
-  &:hover {
+  &:hover,
+  &:focus {
     &::before {
       border: 2px solid @tiffany;
     }
@@ -249,12 +250,14 @@
   }
 }
 
-.form__customer-info:hover + .form__icon-tel {
+.form__customer-info:hover + .form__icon-tel,
+.form__customer-info:focus + .form__icon-tel {
   fill: @tiffany;
   opacity: 1;
 }
 
-.form__customer-info:hover + .form__icon-email {
+.form__customer-info:hover + .form__icon-email,
+.form__customer-info:focus + .form__icon-email {
   fill: @tiffany;
   opacity: 1;
 }
