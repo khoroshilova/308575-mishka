@@ -45,6 +45,7 @@
           </li>
           <li class="user-list__item user-list__item--cart">
             <a class="user-list__link user-list__link--cart" href="#">
+              <span class="visually-hidden">Корзина</span>
               <svg class="user-list__icon-cart" width="21" height="18">
                 <use xlink:href="#icon-cart"></use>
               </svg>Корзина: пока пуста</a>
@@ -90,7 +91,7 @@
                   <a class="item__cart cart-btn" href="#">
                     <svg class="item__cart--icon" width="21" height="18">
                       <use xlink:href="#icon-cart"></use>
-                    </svg>В корзину</a>
+                    </svg>Добавить в корзину</a>
                 </div>
               </div>
             </article>
@@ -114,7 +115,7 @@
                   <a class="item__cart cart-btn" href="#">
                     <svg class="item__cart--icon" width="21" height="18">
                       <use xlink:href="#icon-cart"></use>
-                    </svg>В корзину</a>
+                    </svg>Добавить в корзину</a>
                 </div>
               </div>
             </article>
@@ -139,7 +140,7 @@
                   <a class="item__cart cart-btn" href="#">
                     <svg class="item__cart--icon" width="21" height="18">
                       <use xlink:href="#icon-cart"></use>
-                    </svg>В корзину</a>
+                    </svg>Добавить в корзину</a>
                 </div>
               </div>
             </article>
@@ -215,16 +216,17 @@
         <p class="modal-content__text">Выберите размер:</p>
         <form class="modal-content__form">
           <div class="modal-content__wrapper">
-            <input class="modal-content__checkbox" id="small" type="checkbox" name="small" checked="">
+            <input class="modal-content__checkbox" id="small" type="checkbox" name="small" checked>
             <label class="modal-content__form-label" for="small">S</label>
             <input class="modal-content__checkbox" id="medium" type="checkbox" name="medium">
             <label class="modal-content__form-label" for="medium">M</label>
             <input class="modal-content__checkbox" id="large" type="checkbox" name="large">
             <label class="modal-content__form-label" for="large">L</label>
           </div>
-          <button class="modal-content__button modal-close" type="submit">Добавить</button>
+          <button class="modal-content__button" type="submit">Добавить</button>
         </form>
       </div>
+      <div class="modal-background"></div>
     </section>
     <script src="js/picturefill.min.js"></script>
     <script src="js/script.min.js"></script>

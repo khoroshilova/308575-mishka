@@ -45,6 +45,7 @@
           </li>
           <li class="user-list__item user-list__item--cart">
             <a class="user-list__link user-list__link--cart" href="#">
+              <span class="visually-hidden">Корзина</span>
               <svg class="user-list__icon-cart" width="21" height="18">
                 <use xlink:href="#icon-cart"></use>
               </svg>Корзина: пока пуста</a>
@@ -209,7 +210,7 @@
                     <use xlink:href="#icon-right-arrow"></use>
                   </svg>Следующий отзыв</button>
               </div>
-              <a class="reviews__write button" href="#">Написать</a>
+              <a class="reviews__write button" href="reviews.html">Написать</a>
             </div>
           </section>
           <section class="contacts">
@@ -234,7 +235,7 @@
                 </div>
               </div>
               <div class="contacts__wrapper-write-us-desk">
-                <a class="contacts__write-us button" href="#">Напишите нам</a>
+                <a class="contacts__write-us button" href="writeus.html">Напишите нам</a>
               </div>
             </div>
             <div class="contacts__map">
@@ -300,9 +301,10 @@
               <input class="modal-content__checkbox" id="large" type="checkbox" name="large">
               <label class="modal-content__form-label" for="large">L</label>
             </div>
-            <button class="modal-content__button modal-close" type="submit">Добавить</button>
+            <button class="modal-content__button" type="submit">Добавить</button>
           </form>
         </div>
+        <div class="modal-background"></div>
       </section>
       <script src="js/picturefill.min.js"></script>
       <script src="js/script.min.js"></script>
