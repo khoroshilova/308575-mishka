@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="/fonts/OpenSans.woff2" as="font">
   </head>
   <body>
@@ -111,9 +111,9 @@
           </section>
           <div class="form__wrapper-fieldset form__wrapper-fieldset--customer">
             <section class="form__fieldset form__fieldset--tel">
-              <h2 class="form__caption form__caption--tel">Тел</h2>
+              <h2 class="visually-hidden">Телефон</h2>
+              <label class="form__caption form__caption--tel" for="tel">Тел</label>
               <div class="form__wrapper-block form__wrapper-block--user-info">
-                <label class="form__label form__label--tel" for="tel"></label>
                 <input class="form__customer-info" id="tel" type="tel" name="tel" placeholder="+7 ХХХ ХХ ХХ*" required="">
                 <svg class="form__icon-tel" width="25" height="24">
                   <use xlink:href="#icon-phone"></use>
@@ -121,9 +121,9 @@
               </div>
             </section>
             <section class="form__fieldset form__fieldset--email">
-              <h2 class="form__caption form__caption--email">E-mail</h2>
+              <h2 class="visually-hidden">Электронная почта</h2>
+              <label class="form__caption form__caption--email" for="email">E-mail</label>
               <div class="form__wrapper-block form__wrapper-block--user-info">
-                <label class="form__label form__label--email" for="email"></label>
                 <input class="form__customer-info" id="email" type="email" name="email" placeholder="Ваш Email*" required="">
                 <svg class="form__icon-email" width="32" height="32">
                   <use xlink:href="#icon-mail"></use>
@@ -132,9 +132,9 @@
             </section>
           </div>
           <section class="form__fieldset form__fieldset--wishes">
-            <h2 class="form__caption form__caption--wishes">Доп</h2>
+            <h2 class="visually-hidden">Дополнительная информация</h2>
+            <label class="form__caption form__caption--wishes" for="text">Доп</label>
             <div class="form__wrapper-block form__wrapper-block--user-info">
-              <label class="form__label form__label--wishes" for="text"></label>
               <textarea class="form__customer-info form__customer-info--wishes" id="text" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
           </section>
